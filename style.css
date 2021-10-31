@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #b8bfb0;
+  background-color: #f5f6f4;
+  height: 100vh;
+  font-size: 62.5%;
+  padding: 2rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.welcome {
+  font-size: 2rem;
+  font-weight: 500;
+}
