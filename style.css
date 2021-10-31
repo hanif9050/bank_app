@@ -1,6 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+}
+html {
+  font-size: 62.5%;
   box-sizing: border-box;
 }
 body {
@@ -8,9 +11,10 @@ body {
   color: #b8bfb0;
   background-color: #f5f6f4;
   height: 100vh;
-  font-size: 62.5%;
+
   padding: 2rem;
 }
+/* navigation */
 nav {
   display: flex;
   justify-content: space-between;
@@ -19,4 +23,42 @@ nav {
 .welcome {
   font-size: 2rem;
   font-weight: 500;
+}
+.logo {
+  height: 5.25rem;
+}
+.login {
+  display: flex;
+}
+.login_input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  color: inherit;
+  border: 1px solid #fff;
+  margin-right: 1rem;
+  transition: all 0.3s;
+}
+.login_input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+.login_input::placeholder {
+  color: #bbb;
+}
+.login_btn {
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.login_btn:hover,
+.login_btn:focus {
+  outline: none;
+  color: #777;
 }

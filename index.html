@@ -8,6 +8,7 @@
     <title>Bank App</title>
   </head>
   <body>
+    <!-- navigation -->
     <nav>
       <p class="welcome">Log in to started</p>
       <img src="./image/logo.png" alt="" srcset="" class="logo" />
@@ -17,7 +18,26 @@
           placeholder="user"
           class="login_input login_input--user"
         />
+        <input
+          type="text"
+          placeholder="PIN"
+          maxlength="4"
+          class="login_input login_input--pin"
+        />
+        <button class="login_btn">Go</button>
       </form>
     </nav>
+    <!-- main -->
+    <main class="app">
+      <!-- Balance -->
+      <div class="balance">
+        <div class="div">
+          <p class="balance_label">Current Balance</p>
+          <p class="balance_date">As of <span class="date">05/03/2037</span></p>
+        </div>
+        <p class="balance_value">0000</p>
+      </div>
+      <!-- Movements -->
+    </main>
   </body>
 </html>
