@@ -66,6 +66,8 @@ const loanAmt = document.querySelector(".form_input--loan-amount");
 const closeAct = document.querySelector(".form_input--user");
 const closeActPin = document.querySelector(".form_input--pin");
 const btnClose = document.querySelector(".form_btn--close");
+// sort btn
+const sortBtn = document.querySelector(".btn--sort");
 // timer selector
 const countDown = document.querySelector(".timer");
 
@@ -113,9 +115,12 @@ creatUsername(accounts);
 // console.log(formatDate(new Date(account1.movementsDates[7]), "en-US"));
 // new Intl.DateTimeFormat("en-US").format();
 // /////////////////
-function displayMovements(acc) {
+function displayMovements(acc, sort = false) {
   accountMovements.innerHTML = "";
-  acc.movements.forEach((mov, i) => {
+  const movs = sort
+    ? acc.movements.slice().sort((a, b) => a - b)
+    : acc.movements;
+  movs.forEach((mov, i) => {
     const type = mov > 0 ? "deposit" : "withdrawal";
     const now = new Date(acc.movementsDates[i]);
     const displayDate = formatDate(now, "en-US");
@@ -311,4 +316,10 @@ btnClose.addEventListener("click", function (e) {
   closeAct.value = "";
   containerApp.style.opacity = 0;
   welcomeText.textContent = "Log in to started";
+});
+// sortBtn
+let sorted = false;
+sortBtn.addEventListener("click", function () {
+  displayMovements(currentAccount, !sorted);
+  sorted = !sorted;
 });
